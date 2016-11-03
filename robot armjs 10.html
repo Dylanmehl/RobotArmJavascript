@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            robotArm.loadLevel("exercise 11");
+            robotArm.speed = 9999999;
+            // Works? ya
+            for (var i = 1; i< 10; i++) {robotArm.moveRight();}
+            for (var loop = 1; loop< 16; loop++) { robotArm.grab();
+            if (robotArm.scan() == "white") {robotArm.moveRight(); robotArm.drop(); robotArm.moveLeft(); robotArm.moveLeft();}
+            else {robotArm.drop(); robotArm.moveLeft();}
+            }
+            robotArm.run();
+        </script>
+    </body>
+</html>

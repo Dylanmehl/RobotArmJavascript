@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Robot Arm</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600"></canvas>
+<script src="./robot-arm.js"></script>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    robotArm.initialize(canvas);
+    // Either robotArm.loadLevel(levelName:string) here or
+    // robotArm.randomLevel([columns:int, rows:int]);
+    robotArm.loadLevel("exercise 1");
+    // My instructions go here
+
+    // Try uncommenting to following line and see in the browser what happens!
+    // robotArm.grab();
+
+    robotArm.run();
+</script>
+</body>
+</html>
